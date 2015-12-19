@@ -13,7 +13,7 @@ Twitch chat bot written in Python
 ## config.ini
 config.ini handles IRC and general bot settings  
 _Sample config.ini_  
-```ini
+``` ini
 [auth]
 host = irc.twitch.tv
 port = 6667
@@ -36,7 +36,7 @@ If you are going to run the bot on Twitch, you don't have to change `host` and `
 ## commands.ini
 commands.ini contains all the commands.  
 _Sample commands.ini_
-```ini
+``` ini
 [cmdPing]
 type = 1
 trigger = !ping
@@ -136,7 +136,7 @@ File commands have `type=5` and will reply with the content of a specific file.
 
 ## Examples
 This is an example `commands.ini`
-```ini
+``` ini
 ; !specs command
 [cmdSpecs]
 type=1
