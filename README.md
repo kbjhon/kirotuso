@@ -1,14 +1,14 @@
 # kirotuso
 
 Twitch chat bot written in Python
-<br>
+
 # Installation
 - Install Python 3.5.1
 - Clone the Git repo
 - Rename config.sample.ini in config.ini and edit it
 - Rename commands.sample.ini in commands.ini and edit it
 - Execute main.py
-<br>
+
 # How to configure
 ## config.ini
 config.ini handles IRC and general bot settings  
@@ -32,7 +32,7 @@ showdebugmessages = 0
 ```
 
 If you are going to run the bot on Twitch, you don't have to change `host` and `port`. `username` is your bot's Twitch username, and `password` is your bot's oauth token. You can get an oauth token [here](https://twitchapps.com/tmi). `channel` is the channel where you want to activate the bot. `timeout` is the maximum socket timeout in seconds, keep it to its default value. `startmessage` is the message sent when the bot is started. If you don't want it, set it to nothing, but **don't delete the key**. `botadmins` contains the usernames of bot admins, separated by commas. Bot admins can run special commands (type 2) , we'll se that in a moment. The `debug` section contains some debug settings. If `showserveroutput` is 1, the bot will print all the packets received from the server. If `showdebugmessages` is 1, the bot will print some debug messages.
-<br>
+
 ## commands.ini
 commands.ini contains all the commands.  
 _Sample commands.ini_
@@ -52,7 +52,7 @@ Every section (eg: `[cmdPing]`) represents a command. The name inside the square
 | type=3 | API command (output to chat the content of a URL) |
 | type=4 | File Hook (see below) |
 | type=5 | File command (output to chat the content of a file) |
-<br>
+
 
 ### Simple command
 Simple commands have `type=1`. They only need `type`,`trigger` and `response` keys to work.
@@ -64,7 +64,6 @@ Simple commands have `type=1`. They only need `type`,`trigger` and `response` ke
 | response | Bot's response |
 | _adminOnly_ | If 1, only admins will be able to trigger that command. _Optional_ |
 | _reply_ | If 1, the user who triggered the command will be notified.  _Optional_ |
-<br>
 
 ### Periodic command
 Periodic commands have `type=2` and are sent automatically every _x_ messages.
@@ -74,7 +73,7 @@ Periodic commands have `type=2` and are sent automatically every _x_ messages.
 | type | 2 |
 | period | The amount of messages before sending the response |
 | response | Message to send |
-<br>
+
 
 ### API command
 API commands have `type=3`. When they are triggered, the bot reads a text from a URL and replies with that text. They work just as  Simple commands.
@@ -86,7 +85,7 @@ API commands have `type=3`. When they are triggered, the bot reads a text from a
 | response | URL |
 | _adminOnly_ | If 1, only admins will be able to trigger that command. _Optional_ |
 | _reply_ | If 1, the user who triggered the command will be notified.  _Optional_ |
-<br>
+
 
 ### File Hooks
 File Hooks have `type=4`. When the content of a specific file changes, the bot will automatically output to chat the content of that file.
@@ -95,7 +94,7 @@ File Hooks have `type=4`. When the content of a specific file changes, the bot w
 |-----------|-----------------|
 | type | 4 |
 | response | File path |
-<br>
+
 
 ### File commands
 File commands have `type=5` and will reply with the content of a specific file.
@@ -108,7 +107,7 @@ File commands have `type=5` and will reply with the content of a specific file.
 | defaultResponse | Message to send if the file is empty |
 | _adminOnly_ | If 1, only admins will be able to trigger that command. _Optional_ |
 | _reply_ | If 1, the user who triggered the command will be notified.  _Optional_ |
-<br>
+
 
 # Examples
 This is an example `commands.ini`
@@ -143,6 +142,6 @@ trigger=!np
 response=C:\OsuNpDetector\np.txt
 defaultResponse=Nothing playing!
 ```
-<br>
+
 # License
 This project is under the MIT License. See the LICENSE file for the full license text.
