@@ -143,5 +143,21 @@ response=C:\OsuNpDetector\np.txt
 defaultResponse=Nothing playing!
 ```
 
+# Internal commands
+kirotuso has a set of internal commands. Currently supported internal commands are:  
+- **!reloadcmd** : reload commands.ini without restarting the bot  
+
+More intenal commands will be available soon.  
+
+# TODO
+This is what we've done and what we want to do:
+- [x] Bot core
+- [x] Configurable commands
+- [x] Output from URL
+- [x] Output from file
+- [x] Output file content when it changes
+- [ ] Add/remove/edit commands from chat
+- [ ] Output URL content when it changes (maybe?)
+
 # License
 This project is under the MIT License. See the LICENSE file for the full license text.
