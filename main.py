@@ -261,6 +261,7 @@ while 1:
         r = b.getResponse().lower()
 
         # Check if we have new packets
+        # TODO: this if is probably useless
         if r != None:
             # Make sure this is a PRIVMSG packet
             if r.find("privmsg") != -1:
@@ -273,7 +274,14 @@ while 1:
                 # Set final message to empty
                 message=""
 
-                # Check if that message triggered a command
+                # Check if that message triggered an interal command
+                if r.find("!reloadcmd") != -1:
+                    # Reload commands (!reloadCmd)
+                    b.sendToChat("Commands reloaded!")
+                    cmd.reloadCommands()
+                # elif r.find("!othercommand") != -1: ...
+
+                # Check if that message triggered a custom command
                 # Loop through all commands
                 for i in cmd.commands:
                     # Get command data
