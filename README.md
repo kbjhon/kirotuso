@@ -56,78 +56,52 @@ Every section (eg: `[cmdPing]`) represents a command. The name inside the square
 
 ### Simple command
 Simple commands have `type=1`. They only need `type`,`trigger` and `response` keys to work.
-<table>
-<thead>
-    <tr><td>**Value**</td><td>**Description**</td</tr>
-</thead>
-<tbody>
-    <tr><td>type</td><td>1</td></tr>
-    <tr><td>trigger</td><td>The word that activates the command _(case insensitive)_</td></tr>
-    <tr><td>response</td><td>Bot's response</td></tr>
-    <tr><td>_adminOnly_</td><td>If 1, only admins will be able to trigger that command. _Optional_</td></tr>
-    <tr><td>_reply_</td><td>If 1, the user who triggered the command will be notified.  _Optional_</td></tr>
-</tbody>
-</table>
-
+| **Value** | **Description** |
+|-----------|-----------------|
+| type | 1 |
+| trigger | The word that activates the command _(case insensitive)_ |
+| response | Bot's response |
+| _adminOnly_ | If 1, only admins will be able to trigger that command. _Optional_ |
+| _reply_ | If 1, the user who triggered the command will be notified.  _Optional_ |
 
 ### Periodic command
 Periodic commands have `type=2` and are sent automatically every _x_ messages.
-<table>
-<thead>
-    <tr><td>**Value**</td><td>**Description**</td</tr>
-</thead>
-<tbody>
-    <tr><td>type</td><td>2</td></tr>
-    <tr><td>period</td><td>The amount of messages before sending the response</td></tr>
-    <tr><td>response</td><td>Message to send</td></tr>
-</tbody>
-</table>
+| **Value** | **Description** |
+|-----------|-----------------|
+| type | 2 |
+| period | The amount of messages before sending the response |
+| response | Message to send |
 
 
 ### API command
 API commands have `type=3`. When they are triggered, the bot reads a text from a URL and replies with that text. They work just as  Simple commands
-<table>
-<thead>
-    <tr><td>**Value**</td><td>**Description**</td</tr>
-</thead>
-<tbody>
-    <tr><td>type</td><td>3</td></tr>
-    <tr><td>trigger</td><td>The word that activates the command _(case insensitive)_</td></tr>
-    <tr><td>response</td><td>URL</td></tr>
-    <tr><td>_adminOnly_</td><td>If 1, only admins will be able to trigger that command. _Optional_</td></tr>
-    <tr><td>_reply_</td><td>If 1, the user who triggered the command will be notified.  _Optional_</td></tr>
-</tbody>
-</table>
+| **Value** | **Description** |
+|-----------|-----------------|
+| type | 3 |
+| trigger | The word that activates the command _(case insensitive)_ |
+| response | URL |
+| _adminOnly_ | If 1, only admins will be able to trigger that command. _Optional_ |
+| _reply_ | If 1, the user who triggered the command will be notified.  _Optional_ |
 
 
 ### File Hooks
 File Hooks have `type=4`. When the content of a specific file changes, the bot will automatically output to chat the content of that file.
-<table>
-<thead>
-    <tr><td>**Value**</td><td>**Description**</td</tr>
-</thead>
-<tbody>
-    <tr><td>type</td><td>4</td></tr>
-    <tr><td>response</td><td>File path</td></tr>
-</tbody>
-</table>
+| **Value** | **Description** |
+|-----------|-----------------|
+| type | 4 |
+| response | File path |
 
 
 ### File commands
 File commands have `type=5` and will reply with the content of a specific file.
-<table>
-<thead>
-    <tr><td>**Value**</td><td>**Description**</td</tr>
-</thead>
-<tbody>
-    <tr><td>type</td><td>5</td></tr>
-    <tr><td>trigger</td><td>The word that activates the command _(case insensitive)_</td></tr>
-    <tr><td>response</td><td>File path</td></tr>
-    <tr><td>defaultResponse</td><td>Message to send if the file is empty</td></tr>
-    <tr><td>_adminOnly_</td><td>If 1, only admins will be able to trigger that command. _Optional_</td></tr>
-    <tr><td>_reply_</td><td>If 1, the user who triggered the command will be notified.  _Optional_</td></tr>
-</tbody>
-</table>
+| **Value** | **Description** |
+|-----------|-----------------|
+| type | 5 |
+| trigger | The word that activates the command _(case insensitive)_ |
+| response | File path |
+| defaultResponse | Message to send if the file is empty |
+| _adminOnly_ | If 1, only admins will be able to trigger that command. _Optional_ |
+| _reply_ | If 1, the user who triggered the command will be notified.  _Optional_ |
 
 
 # Examples
