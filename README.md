@@ -56,6 +56,7 @@ Every section (eg: `[cmdPing]`) represents a command. The name inside the square
 
 ### Simple command
 Simple commands have `type=1`. They only need `type`,`trigger` and `response` keys to work.
+
 | **Value** | **Description** |
 |-----------|-----------------|
 | type | 1 |
@@ -66,6 +67,7 @@ Simple commands have `type=1`. They only need `type`,`trigger` and `response` ke
 
 ### Periodic command
 Periodic commands have `type=2` and are sent automatically every _x_ messages.
+
 | **Value** | **Description** |
 |-----------|-----------------|
 | type | 2 |
@@ -74,7 +76,8 @@ Periodic commands have `type=2` and are sent automatically every _x_ messages.
 
 
 ### API command
-API commands have `type=3`. When they are triggered, the bot reads a text from a URL and replies with that text. They work just as  Simple commands
+API commands have `type=3`. When they are triggered, the bot reads a text from a URL and replies with that text. They work just as  Simple commands.
+
 | **Value** | **Description** |
 |-----------|-----------------|
 | type | 3 |
@@ -86,6 +89,7 @@ API commands have `type=3`. When they are triggered, the bot reads a text from a
 
 ### File Hooks
 File Hooks have `type=4`. When the content of a specific file changes, the bot will automatically output to chat the content of that file.
+
 | **Value** | **Description** |
 |-----------|-----------------|
 | type | 4 |
@@ -94,6 +98,7 @@ File Hooks have `type=4`. When the content of a specific file changes, the bot w
 
 ### File commands
 File commands have `type=5` and will reply with the content of a specific file.
+
 | **Value** | **Description** |
 |-----------|-----------------|
 | type | 5 |
