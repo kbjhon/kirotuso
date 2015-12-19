@@ -44,18 +44,14 @@ response = Pong!
 ```
 If you set your commands.ini as above, your bot will have only one command: it write "Pong!" when someone says "!ping". It's not that exciting, right? Well, you can actually do more than a simple ping/pong command. Let's have a look at all the available options.  
 Every section (eg: `[cmdPing]`) represents a command. The name inside the square brackets is the command's identifier, you can set it to whatever you want. Every identifier **must be unique**, so you can't have two or more identifiers with the same name. The `type` key is the most important one, set it according to what you want to do with that command.
-<table>
-<thead>
-    <tr><td>**Value**</td><td>**Description**</td</tr>
-</thead>
-<tbody>
-    <tr><td>type=1</td><td>Simple command</td></tr>
-    <tr><td>type=2</td><td>Periodic command (automatically sent every _x_ messages)</td></tr>
-    <tr><td>type=3</td><td>API command (output to chat the content of a URL)</td></tr>
-    <tr><td>type=4</td><td>File Hook (see below)</td></tr>
-    <tr><td>type=5</td><td>File command (output to chat the content of a file)</td></tr>
-</tbody>
-</table>
+
+| **Value** | **Description** |
+|-----------|-----------------|
+| type=1 | Simple command |
+| type=2 | Periodic command (automatically sent every _x_ messages) |
+| type=3 | API command (output to chat the content of a URL) |
+| type=4 | File Hook (see below) |
+| type=5 | File command (output to chat the content of a file) |
 
 
 ### Simple command
@@ -134,7 +130,7 @@ File commands have `type=5` and will reply with the content of a specific file.
 </table>
 
 
-## Examples
+# Examples
 This is an example `commands.ini`
 ``` ini
 ; !specs command
@@ -167,3 +163,6 @@ trigger=!np
 response=C:\OsuNpDetector\np.txt
 defaultResponse=Nothing playing!
 ```
+
+# License
+This project is under the MIT License. See the LICENSE file for the full license text.
