@@ -8,6 +8,11 @@ run.bat
 __pycache__/
 *.py[cod]
 *$py.class
+=======
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+>>>>>>> da715fa4b4e2d851ca008305d5615042f414003e
 
 # C extensions
 *.so
